@@ -13,7 +13,7 @@ function setup() {
 
     video = createCapture(VIDEO);
     video.size(300,250);
-    video.hide();
+
 
     cposenet = ml5.poseNet(video,modelLoaded);
     posenet.on('pose',getposes);
