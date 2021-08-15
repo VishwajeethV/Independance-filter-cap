@@ -3,7 +3,8 @@ var nose_y =0;
 
 
 function preload() {
-    Mask_image = loadImage("cap-removebg-preview.png");
+ Mask_image = loadImage("cap-removebg-preview.png");
+    
 }
 
 function setup() {
