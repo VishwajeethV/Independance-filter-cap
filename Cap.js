@@ -15,7 +15,7 @@ function setup() {
     video.size(300,250);
     video.hide();
 
-    cposenet = ml5.poseNet(video,modelLoaded);
+    posenet = ml5.poseNet(video,modelLoaded);
     posenet.on('pose',getposes);
     
 }
@@ -42,7 +42,6 @@ function draw() {
 
 image(video,0,0,300,250);
 fill(130,12,0);
-circle(nose_x,nose_y,20);
 image(Mask_image,nose_x-15,nose_y-15,30,30);
 }
 
