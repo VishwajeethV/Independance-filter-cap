@@ -1,3 +1,13 @@
+h3
+{
+    font-size: 25px !important ;
+}
+
+.btn-success:hover
+{
+  background-color:red;
+}
+
 canvas {
     margin-top:80px;
     border: 2px dashed rebeccapurple;

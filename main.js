@@ -3,7 +3,8 @@ var nose_y =0;
 
 
 function preload() {
-    Mask_image = loadImage("cap-removebg-preview.png");
+mask = loadImage("https://i.postimg.cc/6Q3sbK0Q/cap-removebg-preview.png");
+
 }
 
 function setup() {
@@ -15,7 +16,7 @@ function setup() {
     video.size(300,250);
     video.hide();
 
-    cposenet = ml5.poseNet(video,modelLoaded);
+    posenet = ml5.poseNet(video,modelLoaded);
     posenet.on('pose',getposes);
     
 }
@@ -41,10 +42,15 @@ function getposes(result) {
 function draw() {
 
 image(video,0,0,300,250);
-
+fill(130,12,0);
+image(mask,nose_x-78,nose_y-115,150,100);
 }
 
 function take_snapshot() {
 
- save("Mask_filter.jpg");
-} 
+ save("cap.jpg");
+}
+
+function mainpage() {
+    window.location.href = "https://vishwajeethv.github.io/Independance-filter-app/";
+}
